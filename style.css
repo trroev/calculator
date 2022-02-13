@@ -1,0 +1,142 @@
+html {
+    font-size: 150%;
+    font-weight: 300;
+    font-family: Andale Mono, monospace;
+    line-height: 1.4;
+}
+
+body {
+    display: flex;
+    background-image: linear-gradient(236deg, #74ebd5, #acb6e5);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.display {
+    background-color: rgb(28, 28, 28);
+    color: whitesmoke;
+    width: 16.25rem;
+    padding: .75rem 1rem;
+    text-align: right;
+    font-size: calc(1rem * 1.2 * 1.2);
+}
+
+.buttons {
+    background-color: rgb(28, 28, 28);
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: minmax(75px, auto) repeat(4, 75px);
+    grid-template-areas: 
+        "all-clear plus-minus percent divide"
+        "seven eight nine multiply"
+        "four five six subtract"
+        "one two three add"
+        "zero decimal equals equals";
+}
+
+.buttons > button {
+    border: 0;
+    font-family: Andale Mono, monospace;
+    font-size: calc(1rem * 1 * 1);
+}
+
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.zero {
+    grid-area: zero;
+}
+.decimal {
+    grid-area: decimal;
+}
+.all-clear {
+    grid-area: all-clear;
+}
+.plus-minus {
+    grid-area: plus-minus;
+}
+.percent {
+    grid-area: percent;
+}
+.divide {
+    grid-area: divide;
+}
+.multiply {
+    grid-area: multiply;
+}
+.subtract {
+    grid-area: subtract;
+}
+.add {
+    grid-area: add;
+}
+.equals {
+    grid-area: equals;
+}
+
+.operator,
+.equals {
+    background-color: rgb(255, 149, 0);
+    color: whitesmoke;
+}
+
+.operator:active,
+.equals:active {
+    background-color: rgba(255, 149, 0, 0.75);
+}
+
+.all-clear,
+.plus-minus,
+.percent {
+    background-color: rgb(212, 212, 212);
+}
+
+.all-clear:active,
+.plus-minus:active,
+.percent:active {
+    background-color: rgba(212, 212, 212, 0.75);
+}
+
+.number {
+    background-color: rgb(80, 80, 80);
+    color: whitesmoke;
+}
+
+.number:active {
+    background-color: rgba(80, 80, 80, 0.75);
+}
+
+
+
