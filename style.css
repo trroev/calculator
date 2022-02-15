@@ -22,17 +22,20 @@ body {
 .display {
     background-color: rgb(28, 28, 28);
     color: whitesmoke;
-    width: 16.25rem;
+    width: 16rem;
+    height: 90px;
     padding: .75rem 1rem;
-    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
     font-size: calc(1rem * 1.2 * 1.2);
 }
 
 .buttons {
     background-color: rgb(28, 28, 28);
     display: grid;
-    grid-gap: 2px;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 108px);
     grid-template-rows: minmax(75px, auto) repeat(4, 75px);
     grid-template-areas: 
         "all-clear plus-minus percent divide"
@@ -43,7 +46,8 @@ body {
 }
 
 .buttons > button {
-    border: 0;
+    border: 2px solid rgb(28, 28, 28);
+    border-radius: 15px;
     font-family: Andale Mono, monospace;
     font-size: calc(1rem * 1 * 1);
 }
@@ -106,13 +110,13 @@ body {
     grid-area: equals;
 }
 
-.operator,
+[data-type="operator"],
 .equals {
     background-color: rgb(255, 149, 0);
     color: whitesmoke;
 }
 
-.operator:active,
+[data-type="operator"]:active,
 .equals:active {
     background-color: rgba(255, 149, 0, 0.75);
 }
@@ -129,14 +133,11 @@ body {
     background-color: rgba(212, 212, 212, 0.75);
 }
 
-.number {
+[data-type="number"] {
     background-color: rgb(80, 80, 80);
     color: whitesmoke;
 }
 
-.number:active {
+[data-type="number"]:active {
     background-color: rgba(80, 80, 80, 0.75);
 }
-
-
-
