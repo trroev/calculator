@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7e129bd375.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <title>Calculator</title>
 </head>
@@ -13,9 +14,9 @@
         <div class="calculator">
             <div class="display">0</div>
             <div class="buttons">
-                <button class="all-clear">AC</button>
-                <button class="plus-minus">&#177;</button>
-                <button class="percent">%</button>
+                <button class="all-clear" data-type="clear">AC</button>
+                <button class="plus-minus" data-type="plus-minus">&#177;</button>
+                <button class="percent" data-type="percent">%</button>
                 <button data-key="divide" data-type="operator">÷</button>
                 <button data-key="multiply" data-type="operator">&times;</button>
                 <button data-key="subtract" data-type="operator">-</button>
@@ -35,6 +36,9 @@
             </div>
         </div>
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+        <p>Created by trroev <a href="https://github.com/trroev"><i class="fab fa-github"></i
+            ></a> for The Odin Project</p>
+    </div>
 </body>
 </html>

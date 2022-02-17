@@ -9,6 +9,12 @@ buttons.addEventListener('click', event => {
     const { type } = button.dataset
     const { previousButtonType } = calculator.dataset
 
+    if (type === 'clear') {
+        display.textContent = '0'
+    }
+    
+    if (display.textContent === 'OOPS!') return
+
     if (type === 'number') {
         if (displayValue === '0') {
             display.textContent = buttonValue
@@ -28,13 +34,19 @@ buttons.addEventListener('click', event => {
         calculator.dataset.operator = button.dataset.key
     }
 
-    
-
     if (type === 'equals') {
         const firstNumber = calculator.dataset.firstNumber
         const operator = calculator.dataset.operator
         const secondNumber = displayValue
         display.textContent = operate(firstNumber, operator, secondNumber)
+    }
+
+    if (type === 'plus-minus') {
+        display.textContent = (displayValue * -1).toString()
+    }
+
+    if (type === 'percent') {
+        display.textContent = (displayValue / 100).toString()
     }
 
     calculator.dataset.previousButtonType = type
