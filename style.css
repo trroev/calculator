@@ -138,23 +138,29 @@ body {
     background-color: rgba(212, 212, 212, 0.75);
 }
 
-[data-type="number"] {
+[data-type="number"],
+[data-type="decimal"] {
     background-color: rgb(80, 80, 80);
     color: whitesmoke;
 }
 
-[data-type="number"]:active {
+[data-type="number"]:active,
+[data-type="decimal"]:active {
     background-color: rgba(80, 80, 80, 0.75);
 }
 
 .footer {
     margin-top: auto;
-    font-size: 0.80rem;
+    font-size: 0.8rem;
     color: rgb(28, 28, 28);
 }
 
 .fa-github {
     color: rgb(28, 28, 28);
-    font-size: 24px;
-    transition: transform 0.3s ease-in-out;
-  }
+    font-size: 0.9rem;
+    transition: transform 0.7s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotateY(360deg) scale(1.15);
+}
